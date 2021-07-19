@@ -44,6 +44,12 @@ public interface GsDao {
     @Query("SELECT SUM(monto) as total FROM tabla_gastos where categoria = :categorias")
     LiveData<Double> sumGsCat2(String categorias);
 
+    @Query("SELECT id, categoria, fecha, nombre, monto,  SUM(monto) as total FROM tabla_gastos group by fecha")
+    LiveData<List<Gasto>> gastosMes();
+
+//    @Query("SELECT SUM(monto) as total FROM tabla_gastos where fecha = :fecha")
+//    LiveData<Double> gastosTotalesMes(String Fecha);
+
 
 /* No borrar esto
 

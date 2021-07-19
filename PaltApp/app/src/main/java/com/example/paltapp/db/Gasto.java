@@ -19,6 +19,8 @@ public class Gasto {
 
     private double monto;
 
+    private double total;
+
     // Construnctor
     public Gasto( String categoria, String nombre, String fecha, double monto) {
 
@@ -49,6 +51,14 @@ public class Gasto {
 
     public String getCategoria() {
         return categoria;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
 
     public void setCategoria(String categoria) {

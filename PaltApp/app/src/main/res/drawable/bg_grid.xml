@@ -6,6 +6,6 @@
         android:topRightRadius="45dp"
         android:bottomLeftRadius="0dp"
         android:bottomRightRadius="0dp">
-
+                        <!--        FF256C34-->
     </corners>
 </shape>

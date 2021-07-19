@@ -19,6 +19,8 @@ public class GsViewModel extends AndroidViewModel {
     private LiveData<Double> mSumaGsCat;
     private LiveData<Double> mSumAllGastos;
 
+    private LiveData<List<Gasto>> mSumMes;
+
     private LiveData<Double> mSumaGsCat2;
     public String categoria;
 
@@ -33,9 +35,15 @@ public class GsViewModel extends AndroidViewModel {
 
         mSumaGsCat2 = mRepository.sumaGsCat2(categoria);
 
+        mSumMes = mRepository.gastosMes();
 
 
 
+
+    }
+
+    public LiveData<List<Gasto>> SumMes() {
+        return mSumMes;
     }
 
     public LiveData<Double> getSumaGsCat2(String categoria ) {

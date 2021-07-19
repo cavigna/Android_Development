@@ -1,26 +1,34 @@
 package com.example.paltapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.paltapp.db.GsRepositorio;
 import com.example.paltapp.model.GsViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Currency;
+
 public class MainActivity extends AppCompatActivity {
     private GsViewModel gsViewModel;
-    private GsRepositorio gsRepositorio;
     private TextView textViewTotal, textViewHogar,textViewOcio, textViewCompras;
     private String total;
 
     private FloatingActionButton fbAgregar;
+
+
+    //NumberFormat formatter = new DecimalFormat("$ #.###,##");
+
+    NumberFormat format = NumberFormat.getCurrencyInstance();
+//    format.setMaximumFractionDigits(0);
+//    format.setCurrency(Currency.getInstance("EUR"));
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,16 +55,13 @@ public class MainActivity extends AppCompatActivity {
         gsViewModel.SumAllGastos().observe(this, aDouble ->
 
                 textViewTotal.setText(
-                        String.valueOf(aDouble
-                        )));
+                        format.format(aDouble)
+                        ));
 
 
-        gsViewModel.getSumaGsCat2("Hogar").observe(this, aDouble ->
-                textViewHogar.setText(
-                        String.valueOf(aDouble
-                        )));
-        setTextCategorias("Ocio", textViewOcio);
-        setTextCategorias("Compras",textViewCompras );
+        agregarTextCategorias("Hogar", textViewHogar);
+        agregarTextCategorias("Ocio", textViewOcio);
+        agregarTextCategorias("Compras",textViewCompras );
     }
 
     public void agregar(View view) {
@@ -64,12 +69,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void setTextCategorias(String cat, TextView textView){
+    private void agregarTextCategorias(String cat, TextView textView){
+
          gsViewModel.getSumaGsCat2(cat).observe(this, aDouble ->
-                textView.setText(String.valueOf(aDouble)));
+                textView.setText(String.valueOf(format.format(aDouble))));
 
     }
 
+    public void irListadoMes(View view) {
+        Intent intent = new Intent(this, ListadoMes.class);
+        startActivity(intent);
+    }
+
+    public void irListado(View view) {
+        Intent intent = new Intent(this, listado.class);
+        startActivity(intent);
+    }
 
 }
 
@@ -90,4 +105,10 @@ gsViewModel.getmSumaGsCat().observe(this, aDouble ->
             total = new StringBuilder().append("$ ").append(String.valueOf(aDouble)).toString()
         );
         textViewTotal.setText(total);
+
+
+                gsViewModel.getSumaGsCat2("Hogar").observe(this, aDouble ->
+                textViewHogar.setText(
+                        String.valueOf(aDouble
+                        )));
  */

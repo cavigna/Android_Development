@@ -10,6 +10,7 @@ public class GsRepositorio {
 
     private GsDao gsDao;
     private LiveData<List<Gasto>> mAllGastos;
+    private LiveData<List<Gasto>> mgastosMes;
 
     private LiveData<Double> msumaGsCate;
     private LiveData<Double> msumaAllGs;
@@ -26,7 +27,9 @@ public class GsRepositorio {
         mAllGastos = gsDao.selectAllGastos();
         msumaGsCate = gsDao.SumGastosCategoria();
         msumaAllGs = gsDao.sumAllGastos();
-        msumaGsCat2 = gsDao.sumGsCat2(categoria);//
+        msumaGsCat2 = gsDao.sumGsCat2(categoria);
+
+        mgastosMes = gsDao.gastosMes();
 
     }
 
@@ -39,16 +42,15 @@ public class GsRepositorio {
 
     public LiveData<Double> sumaAllGs() {return msumaAllGs; }
 
-//    public LiveData<Double> sumaGsCat2(String categoria){
-//        return msumaGsCat2;
-//    }
-public LiveData<Double> sumaGsCat2(String categoria){
+    public LiveData<List<Gasto>> gastosMes() {
+        return mgastosMes;
+    }
+
+    public LiveData<Double> sumaGsCat2(String categoria){
     return gsDao.sumGsCat2(categoria);
 }
 
-    //    public Double getSumaTodosGastos(){
-//        return sumaTodosGastos;
-//    }
+
 
     // SQLite QUERIES definidas en DAO que se ejecuntan en el REPO.
 

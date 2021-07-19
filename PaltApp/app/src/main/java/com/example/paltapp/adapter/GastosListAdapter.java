@@ -28,8 +28,9 @@ public class GastosListAdapter extends ListAdapter<Gasto, GsRecyclerViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull GsRecyclerViewHolder holder, int position) {
         Gasto current = getItem(position);
-        holder.bindCategoria(current.getCategoria());
+        holder.bindCategoria(current.getNombre());
         holder.bindMonto(current.getMonto());
+        holder.bindImage(current.getCategoria());
     }
 
     public static class GsDiff extends DiffUtil.ItemCallback<Gasto>{

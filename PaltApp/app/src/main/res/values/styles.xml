@@ -14,4 +14,33 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">18sp</item>
     </style>
+
+
+    <string-array name="categoria_gastos">
+        <item>Compras</item>
+        <item>Hogar</item>
+        <item>Transporte</item>
+        <item>Ocio</item>
+        <item>Salud</item>
+        <item>Otros</item>
+        <item>Ingesos</item>
+
+    </string-array>
+
+    <string-array name="mes_gastos">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+
+    </string-array>
+
 </resources>

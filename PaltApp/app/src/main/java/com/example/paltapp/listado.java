@@ -28,11 +28,9 @@ public class listado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado);
 
+        //Conexión con el ViewModel
         mGsViewModel = new ViewModelProvider(this).get(GsViewModel.class);
-
-
-
-
+        //Conexión con el RecyclerView
         recyclerView = findViewById(R.id.recyclerview);
 
 

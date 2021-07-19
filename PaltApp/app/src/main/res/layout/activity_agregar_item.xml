@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="deleteAll"
     tools:context=".AgregarItem">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="351dp"
-        android:layout_height="241dp"
+        android:layout_width="238dp"
+        android:layout_height="159dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="54dp"
-        android:onClick="homeprueba"
+        android:onClick="irListadoMes"
         android:text="Home2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,55 +77,48 @@
         android:id="@+id/editText_nombre"
         android:layout_width="170dp"
         android:layout_height="41dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="211dp"
+        android:layout_marginStart="120dp"
         android:ems="10"
-        android:hint="nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471" />
-
-    <EditText
-        android:id="@+id/editText_fecha"
-        android:layout_width="170dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="208dp"
-        android:ems="10"
-        android:hint="fecha"
+        android:gravity="center"
+        android:hint="Descripcion"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471" />
-
-    <EditText
-        android:id="@+id/editText_categoria"
-        android:layout_width="170dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="28dp"
-        android:ems="10"
-        android:hint="categoria"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
+        app:layout_constraintVertical_bias="0.321" />
 
     <EditText
         android:id="@+id/editText_monto"
         android:layout_width="170dp"
         android:layout_height="41dp"
-        android:layout_marginStart="208dp"
+        android:layout_marginStart="120dp"
         android:ems="10"
-        android:hint="monto"
+        android:gravity="center"
+        android:hint="Total"
         android:inputType="textPersonName|numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
+        app:layout_constraintVertical_bias="0.62" />
+
+    <Spinner
+        android:id="@+id/spinner_cat"
+        android:layout_width="164dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="324dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_fecha"
+        android:layout_width="164dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="388dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

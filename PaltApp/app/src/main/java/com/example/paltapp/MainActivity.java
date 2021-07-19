@@ -17,7 +17,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class MainActivity extends AppCompatActivity {
     private GsViewModel gsViewModel;
     private GsRepositorio gsRepositorio;
-    private TextView textViewTotal, textViewHogar;
+    private TextView textViewTotal, textViewHogar,textViewOcio, textViewCompras;
+    private String total;
 
     private FloatingActionButton fbAgregar;
 
@@ -27,44 +28,66 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // try block to hide Action bar
-        try {this.getSupportActionBar().hide();}
+        try {
+            this.getSupportActionBar().hide();
+        }
         // catch block to handle NullPointerException
-        catch (NullPointerException e) {       }
+        catch (NullPointerException e) {
+        }
 
         fbAgregar = findViewById(R.id.fbAgregar);
         textViewTotal = findViewById(R.id.textView_total);
-        textViewHogar =  findViewById(R.id.tvHogar);
-
-
+        textViewHogar = findViewById(R.id.tvHogar);
+        textViewOcio = findViewById(R.id.tvOcio);
+        textViewCompras = findViewById(R.id.tvCompras);
+        //textViewTotal.setText("$ ");
 
         gsViewModel = new ViewModelProvider(this).get(GsViewModel.class);
 
-        Object montoTotal;
-        gsViewModel.getmSumaGsCat().observe(this, aDouble ->
+        gsViewModel.SumAllGastos().observe(this, aDouble ->
 
                 textViewTotal.setText(
                         String.valueOf(aDouble
-                )));
+                        )));
+
+
         gsViewModel.getSumaGsCat2("Hogar").observe(this, aDouble ->
                 textViewHogar.setText(
                         String.valueOf(aDouble
                         )));
-
+        setTextCategorias("Ocio", textViewOcio);
+        setTextCategorias("Compras",textViewCompras );
     }
 
-    public void agregar(View view){
+    public void agregar(View view) {
         Intent intent = new Intent(this, AgregarItem.class);
         startActivity(intent);
     }
 
+    private void setTextCategorias(String cat, TextView textView){
+         gsViewModel.getSumaGsCat2(cat).observe(this, aDouble ->
+                textView.setText(String.valueOf(aDouble)));
 
+    }
 
 
 }
 
 /*
-gsViewModel.getmSumaGsCat().observe(this, aDouble -> {
-            textViewTotal.setText(
-                    String.valueOf(gsViewModel.SumAllGastos()));
-        });
+gsViewModel.getmSumaGsCat().observe(this, aDouble ->
+
+                textViewTotal.setText(
+                        String.valueOf(aDouble
+                )));
+ */
+
+/*
+ String.valueOf(aDouble)
+ */
+
+/*
+        gsViewModel.getmSumaGsCat().observe(this, aDouble ->
+            total = new StringBuilder().append("$ ").append(String.valueOf(aDouble)).toString()
+        );
+        textViewTotal.setText(total);
  */

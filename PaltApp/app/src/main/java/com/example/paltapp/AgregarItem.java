@@ -69,17 +69,23 @@ public class AgregarItem extends AppCompatActivity {
     }
 
     public void agregarMuchos(View view){
-        Gasto gasto = new Gasto("Ocio", "Netflix", "Julio",
-                7500);
-        gsViewModel.insert(gasto);
-        gasto = new Gasto("Ocio", "The Withcer 3", "Julio",
-                5500);
+//        Gasto gasto = new Gasto("Ocio", "Netflix", "Julio",
+//                7500);
+//        gsViewModel.insert(gasto);
+//        gasto = new Gasto("Ocio", "The Withcer 3", "Julio",
+//                5500);
+//        gsViewModel.insert(gasto);
+//
+//        gasto = new Gasto("Hogar", "Arriendo Julio", "Julio",
+//                25000);
+//        gsViewModel.insert(gasto);
+        Gasto gasto= new Gasto("Compras", "Compra Lider", "Julio",
+                7200);
         gsViewModel.insert(gasto);
 
-        gasto = new Gasto("Hogar", "Arriendo Julio", "Julio",
-                25000);
+        gasto = new Gasto("Hogar", "Electricidad",
+                "Julio", 15000);
         gsViewModel.insert(gasto);
-
 
     }
 

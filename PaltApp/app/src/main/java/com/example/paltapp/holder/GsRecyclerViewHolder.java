@@ -1,4 +1,4 @@
-package com.example.paltapp.adapter;
+package com.example.paltapp.holder;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +31,7 @@ public class GsRecyclerViewHolder extends RecyclerView.ViewHolder {
         //textView_monto.setText(Double.toString(monto));
     }
 
+
     public void bindMonto(Double amount){
         textView_monto.setText(format.format(amount));
         //textView_monto.setText(Double.toString(amount));
@@ -41,7 +42,27 @@ public class GsRecyclerViewHolder extends RecyclerView.ViewHolder {
             case "Compras":
                 imageView_categoria.setImageResource(R.drawable.ic_baseline_shopping_cart_24);
                 break;
+            case "Hogar":// transporte, ocio, salud, otros ingreso
+                imageView_categoria.setImageResource(R.drawable.ic_round_home_work_24);
+                break;
+            case "Transporte":
+                imageView_categoria.setImageResource(R.drawable.ic_baseline_directions_transit_24);
+                break;
+            case "Ocio":
+                imageView_categoria.setImageResource(R.drawable.ic_baseline_videogame_asset_24);
+                break;
+            case "Salud":
+                imageView_categoria.setImageResource(R.drawable.ic_round_local_hospital_24);
+                break;
+            case "Otros":
+                imageView_categoria.setImageResource(R.drawable.ic_avocado_24);
+                break;
+            default:
+                imageView_categoria.setImageResource(R.drawable.ic_avocado_24);
+                break;
+
         }
+
     }
 
     public static GsRecyclerViewHolder create(ViewGroup parent) {
@@ -50,3 +71,7 @@ public class GsRecyclerViewHolder extends RecyclerView.ViewHolder {
         return new GsRecyclerViewHolder(view);
     }
 }
+
+// case "Compras":
+//         imageView_categoria.setImageResource(R.drawable.ic_baseline_shopping_cart_24);
+

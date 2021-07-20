@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="verde_claro_palta">#A5D15B</color>
     <color name="verde_oscuro_palta">#256c34</color>
+    <color name="rosado">#FFC3BE</color>
+    <color name="amarillo_palta">#F9FD94</color>
+    <color name="verde_casi_blanco">#E6F4CE</color>
 </resources>

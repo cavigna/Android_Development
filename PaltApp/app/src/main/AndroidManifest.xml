@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Paltapp">
-        <activity android:name=".ListadoMes"></activity>
-        <activity android:name=".listado" />
-        <activity android:name=".home2" />
-        <activity android:name=".AgregarItem" />
+        <activity android:name=".ui.ListadoMes"></activity>
+        <activity android:name=".ui.listado" />
+        <activity android:name=".ui.home2" />
+        <activity android:name=".ui.AgregarItem" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

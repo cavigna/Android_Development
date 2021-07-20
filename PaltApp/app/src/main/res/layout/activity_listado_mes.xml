@@ -4,17 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListadoMes">
+    android:background="@color/verde_claro_palta"
+    tools:context=".ui.ListadoMes">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_mes"
-        android:layout_width="409dp"
-        android:layout_height="512dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="218dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
+        android:foregroundGravity="top"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="150dp"
+        android:layout_height="142dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.159"
+        app:srcCompat="@drawable/hairpalta" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="296dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="Gastos Mensuales"
+        android:textColor="#E6F4CE"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

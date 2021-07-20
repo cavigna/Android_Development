@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 
 import com.example.paltapp.db.Gasto;
+import com.example.paltapp.holder.GsRecyclerViewHolder;
 
 
 public class GastosListAdapter extends ListAdapter<Gasto, GsRecyclerViewHolder> {

@@ -1,4 +1,4 @@
-package com.example.paltapp;
+package com.example.paltapp.ui;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.paltapp.R;
 import com.example.paltapp.adapter.GastosListAdapter;
 import com.example.paltapp.db.Gasto;
 import com.example.paltapp.db.GsDatabase;

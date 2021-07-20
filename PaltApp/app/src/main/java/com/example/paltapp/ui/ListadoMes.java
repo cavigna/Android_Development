@@ -1,4 +1,4 @@
-package com.example.paltapp;
+package com.example.paltapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.paltapp.R;
 import com.example.paltapp.adapter.GsMesListAdapter;
 import com.example.paltapp.model.GsViewModel;
 

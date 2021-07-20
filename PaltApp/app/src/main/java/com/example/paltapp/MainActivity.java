@@ -9,15 +9,17 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.paltapp.model.GsViewModel;
+import com.example.paltapp.ui.AgregarItem;
+import com.example.paltapp.ui.ListadoMes;
+import com.example.paltapp.ui.listado;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.Currency;
 
 public class MainActivity extends AppCompatActivity {
     private GsViewModel gsViewModel;
-    private TextView textViewTotal, textViewHogar,textViewOcio, textViewCompras;
+    private TextView textViewTotal, textViewHogar,
+            textViewOcio, textViewCompras, textViewTransporte;
     private String total;
 
     private FloatingActionButton fbAgregar;
@@ -35,19 +37,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // try block to hide Action bar
-        try {
-            this.getSupportActionBar().hide();
-        }
-        // catch block to handle NullPointerException
-        catch (NullPointerException e) {
-        }
+//        // try block to hide Action bar
+//        try {
+//            this.getSupportActionBar().hide();
+//        }
+//        // catch block to handle NullPointerException
+//        catch (NullPointerException e) {
+//        }
 
         fbAgregar = findViewById(R.id.fbAgregar);
         textViewTotal = findViewById(R.id.textView_total);
         textViewHogar = findViewById(R.id.tvHogar);
         textViewOcio = findViewById(R.id.tvOcio);
         textViewCompras = findViewById(R.id.tvCompras);
+        textViewTransporte = findViewById(R.id.tvTransporte);
         //textViewTotal.setText("$ ");
 
         gsViewModel = new ViewModelProvider(this).get(GsViewModel.class);
@@ -62,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         agregarTextCategorias("Hogar", textViewHogar);
         agregarTextCategorias("Ocio", textViewOcio);
         agregarTextCategorias("Compras",textViewCompras );
+        agregarTextCategorias("Transporte", textViewTransporte);
     }
 
     public void agregar(View view) {
@@ -69,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //Método que evita escribir muchos observadores distintos.
     private void agregarTextCategorias(String cat, TextView textView){
 
          gsViewModel.getSumaGsCat2(cat).observe(this, aDouble ->

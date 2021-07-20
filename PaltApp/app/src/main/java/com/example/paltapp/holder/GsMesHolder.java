@@ -1,4 +1,4 @@
-package com.example.paltapp.adapter;
+package com.example.paltapp.holder;
 
 import android.view.LayoutInflater;
 import android.view.View;

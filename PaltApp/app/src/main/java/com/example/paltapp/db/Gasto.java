@@ -8,17 +8,10 @@ public class Gasto {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
-
     private String categoria;
-
     private String nombre;
-
-
-
     private String fecha;
-
     private double monto;
-
     private double total;
 
     // Construnctor

@@ -1,4 +1,4 @@
-package com.example.paltapp;
+package com.example.paltapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.paltapp.R;
 import com.example.paltapp.db.Gasto;
 import com.example.paltapp.model.GsViewModel;
 
@@ -35,7 +36,7 @@ public class AgregarItem extends AppCompatActivity {
         gsViewModel = new ViewModelProvider(this).get(GsViewModel.class);
 
 
-        btn = findViewById(R.id.button_home);
+//        btn = findViewById(R.id.button_home);
         btn_add = findViewById(R.id.button_add);
         btn_deleteAll = findViewById(R.id.button_delete);
 

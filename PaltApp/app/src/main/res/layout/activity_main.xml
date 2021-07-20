@@ -27,16 +27,17 @@
             android:layout_height="85dp"
             android:gravity="center"
             android:inputType="numberDecimal"
+            android:letterSpacing="0.1"
             android:text="53.423,12"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="32sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.91"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.328" />
+            app:layout_constraintVertical_bias="0.208" />
 
         <ImageView
             android:id="@+id/palta_hero"
@@ -48,8 +49,8 @@
             app:layout_constraintHorizontal_bias="0.054"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.121"
-            app:srcCompat="@drawable/angrypalta" />
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/britishpalta" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -69,7 +70,6 @@
             android:layout_width="100dp"
             android:layout_height="33dp"
             android:text="123.45"
-            android:textColor="#fff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.096"
@@ -82,8 +82,7 @@
             style="@style/icons_main"
             android:layout_width="100dp"
             android:layout_height="33dp"
-            android:text="123.45"
-            android:textColor="#fff"
+            android:text="$11.523,82"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.543"
@@ -101,10 +100,10 @@
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toTopOf="@+id/imageView8"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintHorizontal_bias="0.147"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView10"
-            app:layout_constraintVertical_bias="0.019" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/tvHogar"
@@ -125,8 +124,7 @@
             android:layout_height="33dp"
             android:layout_marginBottom="156dp"
             android:gravity="center"
-            android:text="123.45"
-            android:textColor="#fff"
+            android:text="$ 52.346,45"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.948"
@@ -139,9 +137,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.874"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvComida3"
+            app:layout_constraintTop_toBottomOf="@+id/tvTransporte"
             app:layout_constraintVertical_bias="0.812"
-            app:srcCompat="@drawable/ic_round_fastfood_24" />
+            app:srcCompat="@drawable/ic_avocado_24" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -155,18 +153,18 @@
             app:srcCompat="@drawable/ic_round_home_work_24" />
 
         <ImageView
-            android:id="@+id/tvTransporte"
+            android:id="@+id/imgTransporte"
             style="@style/cate_home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.863"
+            app:layout_constraintHorizontal_bias="0.886"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.168"
+            app:layout_constraintVertical_bias="0.17"
             app:srcCompat="@drawable/ic_baseline_directions_transit_24" />
 
         <TextView
-            android:id="@+id/tvComida3"
+            android:id="@+id/tvTransporte"
             style="@style/icons_main"
             android:layout_width="100dp"
             android:layout_height="33dp"
@@ -188,7 +186,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.543"
-            app:srcCompat="@drawable/ic_baseline_checkroom_24" />
+            app:srcCompat="@drawable/ic_round_local_hospital_24" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -217,12 +215,10 @@
             android:id="@+id/nav_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="78dp"
-            android:background="#FFFDE7"
+            android:background="@color/verde_casi_blanco"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvComida">
+            app:layout_constraintStart_toStartOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -230,27 +226,34 @@
 
                 <ImageButton
                     android:id="@+id/imageButton_Mes"
-                    android:layout_width="134dp"
-                    android:layout_height="78dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="44dp"
                     android:background="#00FFFFFF"
                     android:onClick="irListadoMes"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
-
-                <ImageButton
-                    android:id="@+id/imageButton_listado"
-                    android:layout_width="134dp"
-                    android:layout_height="78dp"
-                    android:layout_marginStart="260dp"
-                    android:background="#00FFFFFF"
-                    android:onClick="irListado"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton_listado"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/ic_baseline_format_list_bulleted_24" />
+                    app:srcCompat="@drawable/ic_baseline_calendar_today_24"
+                    app:tint="@color/verde_oscuro_palta" />
+
+                <ImageButton
+                    android:id="@+id/imageButton_listado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:onClick="irListado"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.904"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.526"
+                    app:srcCompat="@drawable/ic_baseline_format_list_bulleted_35"
+                    app:tint="@color/verde_oscuro_palta" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
@@ -260,16 +263,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:foregroundTint="@color/verde_casi_blanco"
             android:onClick="agregar"
+            android:tint="@color/verde_casi_blanco"
             android:visibility="visible"
             app:backgroundTint="@color/verde_claro_palta"
             app:elevation="20dp"
+            app:fabSize="auto"
             app:layout_constraintBottom_toBottomOf="@+id/nav_bar"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.882"
-            app:srcCompat="@drawable/ic_baseline_add_24" />
+            app:layout_constraintVertical_bias="0.903"
+            app:srcCompat="@drawable/ic_baseline_add_24_white"
+            app:tint="@color/verde_casi_blanco" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,8 +1,10 @@
-package com.example.paltapp;
+package com.example.paltapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.paltapp.R;
 
 public class home2 extends AppCompatActivity {
 

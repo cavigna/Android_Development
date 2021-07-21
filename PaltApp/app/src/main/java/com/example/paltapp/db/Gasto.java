@@ -16,7 +16,6 @@ public class Gasto {
 
     // Construnctor
     public Gasto( String categoria, String nombre, String fecha, double monto) {
-
         this.nombre = nombre;
         this.categoria = categoria;
         this.fecha = fecha;

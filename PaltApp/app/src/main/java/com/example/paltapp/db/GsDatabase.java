@@ -53,6 +53,7 @@ public abstract class GsDatabase extends RoomDatabase {
                 GsDao dao = minstance.gsDao();
                 //dao.deleteAllGasto();
 
+                //Llena la base de Datos al ser construida. Simplemente para testing
                 Gasto gasto = new Gasto("Ocio", "Netflix", "Julio",
                         7500);
                 dao.insertGasto(gasto);

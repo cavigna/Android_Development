@@ -37,12 +37,13 @@ public class GsRecyclerViewHolder extends RecyclerView.ViewHolder {
         //textView_monto.setText(Double.toString(amount));
     }
 
+    //método que cambia el ícono en función a la caegoria
     public void bindImage(String imagenCatgeoria){
         switch (imagenCatgeoria){
             case "Compras":
                 imageView_categoria.setImageResource(R.drawable.ic_baseline_shopping_cart_24);
                 break;
-            case "Hogar":// transporte, ocio, salud, otros ingreso
+            case "Hogar":
                 imageView_categoria.setImageResource(R.drawable.ic_round_home_work_24);
                 break;
             case "Transporte":
